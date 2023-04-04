@@ -1,15 +1,7 @@
-const express = require('express');
-const http = require('http');
-const path = require('path');
+import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
 
-const app = express();
-
-const port = process.env.PORT || 3001;
-
-app.use(express.static(__dirname + '/dist/'));
-
-app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
-
-const server = http.createServer(app);
-
-server.listen(port, () => console.log(`App running on: http://localhost:${port}`));
+serve((_req) => {
+  return new Response("Hello World!", {
+    headers: { "content-type": "text/plain" },
+  });
+});
