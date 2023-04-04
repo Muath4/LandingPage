@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Bahij TheSansArabic Light";
+    src: url("Bahij_TheSansArabic-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Bahij TheSansArabic Plain";
+    src: url("Bahij_TheSansArabic-Plain.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Bahij TheSansArabic SemiBold";
+    src: url("Bahij_TheSansArabic-SemiBold.ttf") format("opentype");
+}

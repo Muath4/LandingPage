@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+#/dist
 /dist-server
 /tmp
 /out-tsc
@@ -43,7 +43,6 @@ Thumbs.db
 
 .DS_STORE
 
-/dist/
 /bazel-out
 /integration/bazel/bazel-*
 *.log
@@ -100,3 +99,8 @@ baseline.json
 # Husky
 .husky/_
 aio/content/examples/.DS_Store
+
+
+
+# angular 14+
+/.angular/cache
