@@ -1,17 +1,16 @@
 
-const express = require('express');
-const http = require('http');
-const path = require('path');
 
-const app = express();
 
-const port = process.env.PORT || 3001;
+import { Application, send } from "https://deno.land/x/oak/mod.ts";
 
-app.use(express.static(__dirname + '/dist'));
+const app = new Application();
 
-app.get('/*', (req, res) => res.sendFile(path.join(__dirname)));
+app.use(async (context) => {
+  await send(context, context.request.url.pathname, {
+    root: `${Deno.cwd()}/../client-app/dist/`,
+    index: "index.html",
+  });
+});
 
-const server = http.createServer(app);
-
-server.listen(port, () => console.log(`App running on: http://localhost:${port}`));
-
+app.listen({ port: 8080 });
+console.log(`Listening on localhost:${8080}`);
