@@ -4,7 +4,7 @@ const app = new Application();
 
 app.use(async (context) => {
   await send(context, context.request.url.pathname, {
-    root: `${Deno.cwd()}./dist`,
+    root: `${Deno.cwd()}/dist`,
     index: "index.html",
   });
 });
