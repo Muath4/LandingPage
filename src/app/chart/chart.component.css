@@ -40,12 +40,17 @@
     margin: auto;
 }
 
-
+.stats {
+    gap: 20px;
+    padding: 15px;
+    margin: auto;
+}
 
 @container sidebar (max-width: 600px) {
     .stats {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
+        
     }
 
 }
@@ -53,11 +58,8 @@
 @container sidebar (min-width: 600px) {
     .stats {
         max-width: 1400px;
-        margin: auto;
         display: grid;
-        gap: 20px;
         grid-template: repeat(5, minmax(min-content, max-content)) / repeat(6, minmax(0, 1fr));
-        padding: 15px;
     }
 
 }
