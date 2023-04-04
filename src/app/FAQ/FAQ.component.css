@@ -1,0 +1,40 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 1rem;
+}
+
+.main-shape {
+    border-radius: 25px;
+    align-content: center;
+    background-color: white;
+    color: var(--main-bg-color);
+}
+
+#more-button {
+    border-style: none;
+    background: none;
+    font: 16px Serif;
+    color: blue;
+    margin: 0 0 10px 0;
+}
+
+.grow input:checked {
+    color: red;
+}
+
+#more-button:hover {
+    color: black;
+}
+
+.grow {
+    -moz-transition: height .25s;
+    -ms-transition: height .25s;
+    -o-transition: height .25s;
+    -webkit-transition: height .25s;
+    transition: height .25s;
+    height: 0;
+    overflow: hidden;
+}

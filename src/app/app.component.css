@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* .nav-shadow {
+    box-shadow: 0px 5px 5px rgb(241, 241, 241);
+} */
+
+/* .center-bottom-nav {
+    position: absolute;
+    left: 50%;
+    top: 130%;
+    transform: translate(-50%, -50%);
+} */

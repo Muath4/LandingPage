@@ -1,0 +1,28 @@
+<main class="container d-flex flex-column gap-5 flex-wrap justify-content-evenly p-5 main-shape m-2">
+    <div class="display-5 bold">الأسئلة الشائعة</div>
+</main>
+
+<section *ngFor="let oneFAQ of FAQs; index as i;" class="container main-shape p-2 m-2" style="font-size: larger;"
+    [id]="base_faq_cont_id+i" type="button" (click)="growDiv(i)">
+    {{oneFAQ.question}}
+    <div [id]='base_answer_id+i' class="grow">
+        <div class='measuringWrapper'>
+            <div class="bold">
+                {{oneFAQ.answer}}
+            </div>
+        </div>
+    </div>
+</section>
+<h2>Hello World: ngIf!</h2>
+
+<button type="button" (click)="onEditClick()">Make text editable!</button>
+
+<div *ngIf="canEdit; else noEdit">
+    <p>You can edit the following paragraph.</p>
+</div>
+
+<ng-template #noEdit>
+    <p>The following paragraph is read only. Try clicking the button!</p>
+</ng-template>
+
+<p [contentEditable]="canEdit">{{ message }}</p>

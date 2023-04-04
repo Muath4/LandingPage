@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  /* --main-bg-color: #DB7835; */
+  --main-bg-color: hsl(158, 91%, 34%);
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Bahij TheSansArabic Plain;
+  background-color: #f7f7f7;
+  color: #515050;
+  /* background:
+      linear-gradient(217deg, rgb(4, 156, 101), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgb(7, 134, 88), rgba(0, 255, 0, 0) 70.71%),
+
+      linear-gradient(127deg, rgba(16, 20, 226, 0.603), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(52, 216, 88, 0.993), rgba(0, 0, 255, 0) 70.71%);
+  background-attachment: fixed;
+  background-repeat: no-repeat; */
+  /* background: linear-gradient(199deg, rgb(0 55 0 / 79%), rgb(0 29 17) 70.71%) no-repeat center center fixed; */
+}
+
+.bold {
+  font-family: Bahij TheSansArabic SemiBold;
+}
+
+.main-background-color {
+  background-color: var(--main-bg-color);
+}
+
+.under-line {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 0.9em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(186, 233, 216);
+  border-radius: 10px;
+  margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-bg-color);
+  border-radius: 10px;
+  border: .2em solid rgb(186, 233, 216);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(158 81% 24% / 1);
+}
