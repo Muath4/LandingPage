@@ -7,7 +7,7 @@
     color: white;
 
     container-type: inline-size;
-    container-name: sidebar;
+    container-name: stats;
     flex: 1 1 auto;
     background: linear-gradient(199deg, rgb(0 55 0 / 79%), rgb(0 29 17) 70.71%) no-repeat center center fixed;
     user-select: none;
@@ -40,22 +40,24 @@
     margin: auto;
 }
 
+
 .stats {
     gap: 20px;
     padding: 15px;
     margin: auto;
 }
 
-@container sidebar (max-width: 600px) {
+@container stats (max-width: 750px) {
     .stats {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 }
 
-@container sidebar (min-width: 600px) {
+@container stats (min-width: 750px) {
     .stats {
         max-width: 1400px;
         display: grid;
@@ -69,4 +71,5 @@
 /* Solid border */
 hr.solid {
     border-top: 2px solid #bbb;
+    margin: 0.6rem 0;
 }
