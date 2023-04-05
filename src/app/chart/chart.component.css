@@ -41,23 +41,27 @@
 }
 
 
+.stats {
+    gap: 20px;
+    padding: 15px;
+    margin: auto;
+}
 
-@container stats (max-width: 600px) {
+@container stats (max-width: 750px) {
     .stats {
-        display: flex !important;
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 }
 
-@container stats (min-width: 600px) {
+@container stats (min-width: 750px) {
     .stats {
         max-width: 1400px;
-        margin: auto;
         display: grid;
-        gap: 20px;
         grid-template: repeat(5, minmax(min-content, max-content)) / repeat(6, minmax(0, 1fr));
-        padding: 15px;
     }
 
 }
