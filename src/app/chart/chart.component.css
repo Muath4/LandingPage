@@ -7,7 +7,7 @@
     color: white;
 
     container-type: inline-size;
-    container-name: sidebar;
+    container-name: stats;
     flex: 1 1 auto;
     background: linear-gradient(199deg, rgb(0 55 0 / 79%), rgb(0 29 17) 70.71%) no-repeat center center fixed;
     user-select: none;
@@ -42,7 +42,7 @@
 
 
 
-@container sidebar (max-width: 600px) {
+@container stats (max-width: 600px) {
     .stats {
         display: flex !important;
         flex-direction: column;
@@ -50,7 +50,7 @@
 
 }
 
-@container sidebar (min-width: 600px) {
+@container stats (min-width: 600px) {
     .stats {
         max-width: 1400px;
         margin: auto;
@@ -67,4 +67,5 @@
 /* Solid border */
 hr.solid {
     border-top: 2px solid #bbb;
+    margin: 0.6rem 0;
 }
