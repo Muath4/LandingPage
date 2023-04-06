@@ -1,11 +1,5 @@
 :host {
-    /* background-color: #16113a; */
-    /* background: linear-gradient(199deg, rgb(0 55 0 / 79%), rgb(0 29 17) 70.71%); */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     color: white;
-
     container-type: inline-size;
     container-name: stats;
     flex: 1 1 auto;
@@ -43,11 +37,12 @@
 
 .stats {
     gap: 20px;
-    padding: 15px;
+    padding-block: 2rem;
+    padding-inline: 3dvw;
     margin: auto;
 }
 
-@container stats (max-width: 750px) {
+@container stats (max-width: 850px) {
     .stats {
         display: flex;
         flex-direction: row;
@@ -55,15 +50,42 @@
         justify-content: center;
     }
 
+    .stats>* {
+        flex: 1 1 auto;
+    }
+
 }
 
-@container stats (min-width: 750px) {
+@container stats (min-width: 850px) and (max-width: 1240px) {
+    .stats {
+        max-width: 1000px;
+        display: grid;
+        /* grid-template: repeat(5, minmax(min-content, max-content)) / repeat(6, minmax(0, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+
+@container stats (min-width: 1240px) {
     .stats {
         max-width: 1400px;
         display: grid;
-        grid-template: repeat(5, minmax(min-content, max-content)) / repeat(6, minmax(0, 1fr));
+        /* grid-template: repeat(5, minmax(min-content, max-content)) / repeat(6, minmax(0, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
+}
 
+.stats .span2rows {
+    grid-row: span 2;
+}
+
+.stats .span2columns {
+    grid-column: span 2;
+}
+
+.stats .span2 {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 
