@@ -13,7 +13,6 @@ html {
 body {
   height: 100%;
   font-family: Bahij TheSansArabic Plain;
-  background-color: #f7f7f7;
   color: #515050;
   /* background:
       linear-gradient(217deg, rgb(4, 156, 101), rgba(255, 0, 0, 0) 70.71%),
@@ -24,6 +23,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat; */
   /* background: linear-gradient(199deg, rgb(0 55 0 / 79%), rgb(0 29 17) 70.71%) no-repeat center center fixed; */
+  background: linear-gradient(199deg, rgb(0 55 0 / 79%), rgb(0 29 17) 70.71%) no-repeat center center fixed;
 }
 
 .bold {
