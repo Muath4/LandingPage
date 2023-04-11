@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import Chart from 'chart.js/auto';
 import { Legend } from 'chart.js';
 
+// @ts-ignore
+import { onmessage } from './worker1.js'
+
 
 import { BarChartConfig } from './ChartConfig'
 // @ts-ignore
@@ -78,25 +81,15 @@ export class ChartComponent {
   ]
 
 
-
   ngOnInit() {
-
     console.log("reduce: " + [3, 1, 1].reduce((sum, current) => sum + current, 0))
 
     Chart.defaults.color = "#fff";
 
-    // Chart.register(Legend);
-    // this.createBarChart({ containerId: "visit-portal-chart", labels: [''], data1: [this.visitPortal2020Num], data2: [this.visitPortal2021Num], data3: [this.visitPortal2022Num], data4: [this.visitPortal2023Num] })
-    //this.createBarChart({ containerId: "user-portal-chart", labels: [''], data1: [this.userPortal2020Num], data2: [this.userPortal2021Num], data3: [this.userPortal2022Num], data4: [this.userPortal2023Num] });
-    // this.createBarChart({ containerId: "user-database-chart", labels: [''], data1: [this.databaseusers2020Num.toString()], data2: [this.databaseusers2021Num.toString()], data3: [this.databaseusers2022Num.toString()], data4: [this.databaseusers2023Num.toString()] });
 
     this.createBarChart({ containerId: "user-database-chart", labels: [''], data: this.databaseUsersOverTime(), indexAxis: 'x' });
 
     this.createBarChart({ containerId: "visit-portal-compare-2021-2022-bar-chart", labels: this.arrayOfNum(12), data: this.compare2021With2022Data(), indexAxis: 'x' });
-
-    // this.createPieChart({ containerId: "visit-portal-pie-chart", labels: [this.y2020, this.y2021, this.y2022, this.y2023], data1: [this.visitPortal2020Num], data2: [this.visitPortal2021Num], data3: [this.visitPortal2022Num], data4: [this.visitPortal2023Num] });
-    // this.createPieChart({ containerId: "user-portal-pie-chart", labels: [this.y2020, this.y2021, this.y2022, this.y2023], data1: [this.userPortal2020Num], data2: [this.userPortal2021Num], data3: [this.userPortal2022Num], data4: [this.userPortal2023Num] });
-    // this.createPieChart({ containerId: "user-database-pie-chart", labels: [this.y2020, this.y2021, this.y2022, this.y2023], data1: [this.databaseusers2020Num.toString()], data2: [this.databaseusers2021Num.toString()], data3: [this.databaseusers2022Num.toString()], data4: [this.databaseusers2023Num.toString()] });
 
     this.createPieChart("city-visit-pie-chart", ["الرياض", "جدة", "الدمام", "مكة", "الجوف"], ["760000", "90000", "70000", "50000", "40000"]);
     this.createLineChart("visit-portal-line-chart", [this.y2020, this.y2021, this.y2022], [this.visitPortal2020Num, this.visitPortal2021Num, this.visitPortal2022Num]);
@@ -118,7 +111,6 @@ export class ChartComponent {
         // aspectRatio: 2.5,
         responsive: true,
         indexAxis: barConfig.indexAxis,
-
         animation: {
           onComplete: () => {
             delayed = true;
@@ -185,6 +177,7 @@ export class ChartComponent {
       },
       options: {
         responsive: true,
+
         scales: {
           y: {
             beginAtZero: true
